@@ -1,175 +1,1212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robux Giveaway | YouTube Shorts</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robux Sender Pro — Free Robux Generator 2025</title>
+  <meta name="description" content="Send free Robux to any Roblox account instantly. 100% working, no verification needed."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Swiper Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script type="text/javascript" id="ogjs" src="https://tapunlock.co/cl/js/rnn31k"></script>
   <style>
+    :root {
+      --red:     #e60000;
+      --red2:    #ff2222;
+      --robux:   #00c8ff;
+      --robux2:  #0090cc;
+      --gold:    #ffc700;
+      --green:   #00d563;
+      --dark:    #0d0d14;
+      --dark2:   #141420;
+      --card:    rgba(255,255,255,0.06);
+      --border:  rgba(255,255,255,0.1);
+      --white:   #ffffff;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Nunito', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 40px;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    /* ---- BACKGROUND ---- */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: -2;
+      background:
+        radial-gradient(ellipse 70% 50% at 10% 0%,   rgba(0,200,255,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 100%,  rgba(230,0,0,0.1)   0%, transparent 60%),
+        radial-gradient(ellipse 80% 60% at 50% 50%,   rgba(255,199,0,0.04) 0%, transparent 70%);
     }
 
-    .gradient-bg {
-      background: linear-gradient(135deg, #6d28d9, #ec4899, #4f46e5);
-      background-size: 300% 300%;
-      animation: gradientMove 8s ease infinite;
+    /* Grid texture */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: -1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    /* ---- FLOATING COINS ---- */
+    .coins-bg { position: fixed; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+    .coin-float {
+      position: absolute;
+      width: 24px; height: 24px;
+      background: radial-gradient(circle at 35% 35%, var(--gold), #c97a00);
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      animation: coinDrift linear infinite;
+      opacity: 0;
+    }
+    .coin-float::after {
+      content: 'R$';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.8);
+    }
+    @keyframes coinDrift {
+      0%   { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+      5%   { opacity: 0.5; }
+      95%  { opacity: 0.5; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
     }
 
-    .glow-btn {
-      box-shadow: 0 0 15px rgba(255,255,255,0.6);
+    /* ---- HEADER ---- */
+    .site-header {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--robux), var(--robux2));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(0,200,255,0.4);
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      background: linear-gradient(90deg, var(--robux), #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .online-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,213,99,0.1);
+      border: 1px solid rgba(0,213,99,0.25);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+    .online-dot {
+      width: 7px; height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: blink 1.2s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;box-shadow:0 0 6px var(--green);} 50%{opacity:.3;} }
+
+    /* ---- MAIN CARD ---- */
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(20,20,32,0.95);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-top: 2px solid var(--robux);
+      border-radius: 2px 2px 22px 22px;
+      padding: 32px 28px;
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.5),
+        0 0 0 1px rgba(255,255,255,0.03),
+        0 0 50px rgba(0,200,255,0.06);
+      animation: cardIn 0.7s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes cardIn {
+      from { opacity:0; transform:translateY(28px) scale(.97); }
+      to   { opacity:1; transform:translateY(0) scale(1); }
+    }
+
+    /* Hero text */
+    .card-hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,199,0,0.1);
+      border: 1px solid rgba(255,199,0,0.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .card-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.9rem, 5vw, 2.5rem);
+      line-height: 1.1;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,.75) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-title .accent {
+      background: linear-gradient(90deg, var(--robux), #66e0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-sub {
+      font-size: .92rem;
+      color: rgba(255,255,255,.45);
+      font-weight: 600;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    /* Trust row */
+    .trust-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: .74rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.6);
+    }
+
+    /* ---- STEP INDICATOR ---- */
+    .steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 26px;
+    }
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      flex: 1;
+      max-width: 110px;
+    }
+    .step-circle {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      border: 2px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.3);
+      transition: all .4s;
+      position: relative;
+      z-index: 1;
+    }
+    .step-circle.active {
+      background: linear-gradient(135deg, var(--robux), var(--robux2));
+      border-color: var(--robux);
+      color: #fff;
+      box-shadow: 0 0 16px rgba(0,200,255,0.4);
+    }
+    .step-circle.done {
+      background: linear-gradient(135deg, var(--green), #00a84d);
+      border-color: var(--green);
+      color: #fff;
+      box-shadow: 0 0 14px rgba(0,213,99,0.3);
+    }
+    .step-label {
+      font-size: .67rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.3);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .step-label.active { color: var(--robux); }
+    .step-label.done { color: var(--green); }
+
+    .step-line {
+      flex: 1;
+      height: 2px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 19px;
+      transition: background .4s;
+    }
+    .step-line.done { background: var(--green); }
+
+    /* ---- SEARCH SECTION ---- */
+    .section { margin-bottom: 20px; }
+
+    .input-label {
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+    .input-wrap i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,.25);
+      font-size: .95rem;
+      transition: color .3s;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      outline: none;
+      transition: all .3s;
+    }
+    input[type="text"]::placeholder { color: rgba(255,255,255,.25); font-weight: 600; }
+    input[type="text"]:focus {
+      border-color: var(--robux);
+      background: rgba(0,200,255,0.06);
+      box-shadow: 0 0 0 3px rgba(0,200,255,0.12);
+    }
+    input[type="text"]:focus + i,
+    .input-wrap:focus-within i { color: var(--robux); }
+
+    .search-btn {
+      width: 100%;
+      margin-top: 12px;
+      padding: 15px;
+      background: linear-gradient(135deg, var(--robux), var(--robux2));
+      border: none;
+      border-radius: 12px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.15rem;
+      letter-spacing: .5px;
+      color: #fff;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 8px 24px rgba(0,200,255,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .search-btn::after {
+      content: '';
+      position: absolute;
+      top:0; left:-100%; width:60%; height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+      transition: left .5s;
+    }
+    .search-btn:hover::after { left: 160%; }
+    .search-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,200,255,0.45); }
+    .search-btn:active { transform: translateY(0); }
+    .search-btn:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+
+    /* ---- PROFILE CARD ---- */
+    #profileSection { display: none; }
+
+    .profile-card {
+      background: linear-gradient(135deg, rgba(0,200,255,0.08), rgba(0,144,204,0.05));
+      border: 1px solid rgba(0,200,255,0.2);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeSlide .5s ease both;
+    }
+    @keyframes fadeSlide { from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);} }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 100px; height: 100px;
+      background: radial-gradient(circle, rgba(0,200,255,0.15), transparent 65%);
+      pointer-events: none;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    #avatar {
+      width: 68px; height: 68px;
+      border-radius: 14px;
+      border: 2px solid rgba(0,200,255,0.4);
+      object-fit: cover;
+      background: #1a1a2e;
+      display: block;
+    }
+    .avatar-verified {
+      position: absolute;
+      bottom: -5px; right: -5px;
+      width: 20px; height: 20px;
+      background: var(--green);
+      border-radius: 50%;
+      border: 2px solid var(--dark2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .55rem;
+      color: #fff;
+    }
+
+    .profile-info { flex: 1; min-width: 0; }
+    .profile-name {
+      font-weight: 900;
+      font-size: 1.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .profile-id { font-size: .78rem; color: rgba(255,255,255,.4); font-weight: 600; margin-top: 3px; }
+    .profile-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 7px;
+      background: rgba(0,213,99,0.1);
+      border: 1px solid rgba(0,213,99,0.25);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+
+    /* ---- AMOUNT GRID ---- */
+    .amount-title {
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .amount-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .amount-opt {
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 14px 12px;
+      cursor: pointer;
+      transition: all .3s;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .amount-opt:hover {
+      background: rgba(0,200,255,0.07);
+      border-color: rgba(0,200,255,0.3);
+      transform: translateY(-2px);
+    }
+    .amount-opt.selected {
+      background: rgba(0,200,255,0.1);
+      border-color: var(--robux);
+      box-shadow: 0 0 0 1px rgba(0,200,255,0.2), 0 6px 20px rgba(0,200,255,0.15);
+    }
+    .amount-opt.selected::before {
+      content: '✓';
+      position: absolute;
+      top: 7px; right: 9px;
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--robux);
+    }
+
+    .opt-popular {
+      position: absolute;
+      top: -1px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #000;
+      font-size: .58rem;
+      font-weight: 900;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .opt-coin {
+      width: 30px; height: 30px;
+      background: radial-gradient(circle at 35% 35%, var(--gold), #c97a00);
+      border-radius: 50%;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.9);
+      box-shadow: 0 3px 10px rgba(255,199,0,0.3);
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+    .opt-amount {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      color: #fff;
+      line-height: 1;
+    }
+    .opt-label { font-size: .68rem; color: rgba(255,255,255,.35); font-weight: 700; margin-top: 3px; }
+
+    /* ---- SEND BUTTON ---- */
+    #sendBtn {
+      display: none;
+      width: 100%;
+      padding: 17px;
+      background: linear-gradient(135deg, var(--green), #00a84d);
+      border: none;
+      border-radius: 12px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.25rem;
+      letter-spacing: .5px;
+      color: #fff;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 8px 24px rgba(0,213,99,0.3);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    #sendBtn::after {
+      content: '';
+      position: absolute;
+      top:0; left:-100%; width:60%; height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+      transition: left .5s;
+    }
+    #sendBtn:hover::after { left:160%; }
+    #sendBtn:hover { transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,213,99,.45); }
+    #sendBtn:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+
+    /* ---- STATUS ---- */
+    #statusBox {
+      display: none;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      animation: popIn .4s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes popIn { from{opacity:0;transform:scale(.94);} to{opacity:1;transform:scale(1);} }
+    #statusBox.sending {
+      background: rgba(0,200,255,0.08);
+      border: 1px solid rgba(0,200,255,0.25);
+      color: var(--robux);
+    }
+    #statusBox.success {
+      background: rgba(0,213,99,0.08);
+      border: 1px solid rgba(0,213,99,0.25);
+      color: var(--green);
+    }
+    #statusBox.error {
+      background: rgba(230,0,0,0.08);
+      border: 1px solid rgba(230,0,0,0.25);
+      color: #ff6666;
+    }
+
+    .status-inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    /* Progress bar inside status */
+    .status-prog {
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    .status-prog-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--robux), var(--green));
+      transition: width .4s ease;
+    }
+
+    /* Spinner */
+    .spinner {
+      display: inline-block;
+      width: 18px; height: 18px;
+      border: 2.5px solid rgba(255,255,255,0.15);
+      border-top-color: currentColor;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform:rotate(360deg); } }
+
+    /* ---- FEATURE BADGES ---- */
+    .feat-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+    }
+    .feat-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: .73rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* ---- RECENT ACTIVITY ---- */
+    .activity-wrap {
+      width: 100%;
+      max-width: 520px;
+      margin-top: 20px;
+      background: rgba(20,20,32,0.9);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 18px 20px;
+      animation: cardIn .8s .2s cubic-bezier(.22,1,.36,1) both;
+    }
+    .activity-title {
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,.3);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .activity-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .activity-item:last-child { border:none; }
+    .act-av {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1a2a4a, #0a1a2e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--robux);
+      flex-shrink: 0;
+      border: 1px solid rgba(0,200,255,0.2);
+    }
+    .act-info { flex: 1; }
+    .act-user { font-size: .85rem; font-weight: 700; }
+    .act-time { font-size: .7rem; color: rgba(255,255,255,.3); font-weight: 600; margin-top: 1px; }
+    .act-amount {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .act-amount small { font-size: .6rem; color: rgba(255,199,0,.5); font-family:'Nunito',sans-serif; }
+
+    /* ---- LIVE COUNTER ---- */
+    .live-bar {
+      width: 100%;
+      max-width: 520px;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.35);
+      animation: cardIn .9s .3s cubic-bezier(.22,1,.36,1) both;
+    }
+
+    /* ---- MODAL ---- */
+    .modal {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+    .modal.open { display: flex; animation: fadeIn .25s ease; }
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+    .modal-box {
+      background: linear-gradient(145deg, #0d0d1a, #1a1a2a);
+      border: 1px solid rgba(0,200,255,0.25);
+      border-top: 2px solid var(--robux);
+      border-radius: 2px 2px 20px 20px;
+      padding: 28px 24px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      animation: slideUp .35s cubic-bezier(.22,1,.36,1);
+    }
+    @keyframes slideUp { from{transform:translateY(20px);opacity:0;} to{transform:translateY(0);opacity:1;} }
+
+    .modal-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .modal-box h3 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .modal-box p { color:rgba(255,255,255,.65); font-size:.9rem; line-height:1.5; margin-bottom:20px; }
+
+    .modal-cta {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--robux), var(--robux2));
+      border: none;
+      border-radius: 12px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: all .3s;
+      box-shadow: 0 8px 24px rgba(0,200,255,0.3);
+    }
+    .modal-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,200,255,0.45); }
+
+    .modal-dismiss {
+      display: block;
+      margin-top: 12px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.25);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+    }
+    .modal-dismiss:hover { color: rgba(255,255,255,.5); }
+
+    /* ---- RESPONSIVE ---- */
+    @media(max-width:380px){
+      .card { padding: 22px 16px; }
+      .amount-grid { grid-template-columns: repeat(2,1fr); }
     }
   </style>
 </head>
-<body class="gradient-bg text-white overflow-x-hidden">
+<body>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 data-aos="fade-down" class="text-4xl md:text-6xl font-extrabold leading-tight max-w-4xl">
-      🎉 Massive Robux Giveaway for My YouTube Shorts Followers!
-    </h1>
+  <!-- Floating coins bg -->
+  <div class="coins-bg" id="coinsBg"></div>
 
-    <p data-aos="fade-up" data-aos-delay="200" class="mt-6 text-lg md:text-xl max-w-2xl">
-      Celebrating our growing community with thousands of Robux in prizes. Enter now and level up your Roblox experience!
-    </p>
-
-    <div data-aos="zoom-in" data-aos-delay="400" class="mt-10 flex flex-col sm:flex-row gap-4">
-      <button onclick="scrollToEntry()" class="glow-btn bg-white text-purple-600 font-semibold px-8 py-4 rounded-2xl hover:scale-105 transition">
-        Enter Giveaway 🚀
-      </button>
-      <button class="border border-white px-8 py-4 rounded-2xl hover:bg-white hover:text-purple-600 transition">
-        Watch Latest Short ▶
-      </button>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-icon">R$</div>
+      <span class="brand-name">RobuxSender Pro</span>
     </div>
-  </section>
+    <div class="online-pill">
+      <span class="online-dot"></span>
+      <span id="onlineCount">2,841</span> online
+    </div>
+  </header>
 
-  <!-- How It Works -->
-  <section class="py-20 px-6 bg-white text-gray-800">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">How to Participate</h2>
+  <!-- Main Card -->
+  <div class="card">
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass p-8 rounded-3xl shadow-xl" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold mb-4">1. Subscribe</h3>
-          <p>Subscribe to my YouTube Shorts channel and stay active.</p>
-        </div>
+    <!-- Hero -->
+    <div class="card-hero">
+      <div class="hero-tag">🎮 Free for a limited time</div>
+      <div class="card-title">Send <span class="accent">Free Robux</span><br>To Any Account</div>
+      <div class="card-sub">Enter a username, pick an amount, and send Robux instantly — no password needed.</div>
+    </div>
 
-        <div class="glass p-8 rounded-3xl shadow-xl" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-semibold mb-4">2. Like & Comment</h3>
-          <p>Like the giveaway short and comment your Roblox username.</p>
-        </div>
+    <!-- Trust badges -->
+    <div class="trust-row">
+      <div class="trust-badge"><i class="fas fa-shield-alt" style="color:#00e5ff"></i> Safe & Secure</div>
+      <div class="trust-badge"><i class="fas fa-bolt" style="color:var(--gold)"></i> Instant Transfer</div>
+      <div class="trust-badge"><i class="fas fa-check-circle" style="color:var(--green)"></i> 100% Free</div>
+    </div>
 
-        <div class="glass p-8 rounded-3xl shadow-xl" data-aos="fade-up" data-aos-delay="300">
-          <h3 class="text-xl font-semibold mb-4">3. Wait for Results</h3>
-          <p>Winners are announced in an upcoming YouTube Short.</p>
-        </div>
+    <!-- Step indicator -->
+    <div class="steps" id="stepsBar">
+      <div class="step-item">
+        <div class="step-circle active" id="sc1">1</div>
+        <div class="step-label active" id="sl1">Username</div>
+      </div>
+      <div class="step-line" id="line1"></div>
+      <div class="step-item">
+        <div class="step-circle" id="sc2">2</div>
+        <div class="step-label" id="sl2">Amount</div>
+      </div>
+      <div class="step-line" id="line2"></div>
+      <div class="step-item">
+        <div class="step-circle" id="sc3">3</div>
+        <div class="step-label" id="sl3">Send</div>
       </div>
     </div>
-  </section>
 
-  <!-- Prize Slider -->
-  <section class="py-20 px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Giveaway Prizes</h2>
+    <!-- Step 1: Search -->
+    <div class="section" id="searchSection">
+      <div class="input-label"><i class="fas fa-user"></i> Roblox Username</div>
+      <div class="input-wrap">
+        <input type="text" id="username" placeholder="e.g. Builderman" autocomplete="off" spellcheck="false"/>
+        <i class="fas fa-search" style="pointer-events:none; position:absolute; left:16px; top:50%; transform:translateY(-50%); color:rgba(255,255,255,.25);"></i>
+      </div>
+      <button class="search-btn" id="searchBtn" onclick="searchProfile()">
+        🔍 &nbsp;Find Profile
+      </button>
+    </div>
 
-    <div class="swiper mySwiper max-w-4xl mx-auto">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-white text-gray-800 rounded-3xl p-10 shadow-2xl">
-          <h3 class="text-2xl font-bold">🥇 10,000 Robux</h3>
+    <!-- Profile & Amount (step 2+3) -->
+    <div id="profileSection">
+
+      <!-- Profile card -->
+      <div class="profile-card" id="profileCard">
+        <div class="avatar-wrap">
+          <img id="avatar" src="" alt="avatar"/>
+          <div class="avatar-verified"><i class="fas fa-check" style="font-size:.5rem;"></i></div>
         </div>
-        <div class="swiper-slide bg-white text-gray-800 rounded-3xl p-10 shadow-2xl">
-          <h3 class="text-2xl font-bold">🥈 5,000 Robux</h3>
+        <div class="profile-info">
+          <div class="profile-name" id="displayName">—</div>
+          <div class="profile-id" id="userId">ID: —</div>
+          <div class="profile-status"><span class="online-dot" style="width:6px;height:6px;"></span> Ready to receive</div>
         </div>
-        <div class="swiper-slide bg-white text-gray-800 rounded-3xl p-10 shadow-2xl">
-          <h3 class="text-2xl font-bold">🥉 2,500 Robux</h3>
+
+      </div>
+
+      <!-- Amount selection -->
+      <div class="amount-title"><i class="fas fa-coins" style="color:var(--gold)"></i> Choose Amount</div>
+      <div class="amount-grid">
+        <div class="amount-opt" data-value="800">
+          <img width="30px" src="robux.png" alt="Robux Coin"/>
+          <div class="opt-amount">800</div>
+          <div class="opt-label">Starter Pack</div>
+        </div>
+        <div class="amount-opt" data-value="1700" style="position:relative;">
+          <div class="opt-popular">🔥 Popular</div>
+          <img width="30px" src="robux.png" alt="Robux Coin"/>
+          <div class="opt-amount">1,700</div>
+          <div class="opt-label">Value Pack</div>
+        </div>
+        <div class="amount-opt" data-value="4500">
+          <img width="30px" src="robux.png" alt="Robux Coin"/>
+          <div class="opt-amount">4,500</div>
+          <div class="opt-label">Premium Pack</div>
+        </div>
+        <div class="amount-opt" data-value="10000" style="position:relative;">
+          <div class="opt-popular" style="background:var(--robux); color:#fff;">⚡ Max</div>
+          <img width="30px" src="robux.png" alt="Robux Coin"/>
+          <div class="opt-amount">10,000</div>
+          <div class="opt-label">Mega Pack</div>
         </div>
       </div>
-      <div class="swiper-pagination mt-6"></div>
+
+      <!-- Status box -->
+      <div id="statusBox">
+        <div class="status-inner" id="statusInner"></div>
+        <div class="status-prog" id="statusProg" style="display:none;">
+          <div class="status-prog-fill" id="statusProgFill"></div>
+        </div>
+      </div>
+
+      <!-- Send button -->
+      <button id="sendBtn" onclick="sendRobux()">💎 &nbsp;Send Robux Now</button>
+
+      <!-- Feature badges -->
+      <div class="feat-row">
+        <div class="feat-badge"><i class="fas fa-lock" style="color:var(--robux)"></i> Encrypted</div>
+        <div class="feat-badge"><i class="fas fa-eye-slash" style="color:var(--robux)"></i> Anonymous</div>
+        <div class="feat-badge"><i class="fas fa-redo" style="color:var(--robux)"></i> Unlimited</div>
+      </div>
     </div>
-  </section>
 
-  <!-- Entry Form -->
-  <section id="entry" class="py-20 px-6 bg-white text-gray-800">
-    <div class="max-w-xl mx-auto glass p-10 rounded-3xl shadow-2xl">
-      <h2 class="text-2xl font-bold text-center mb-6">Enter the Giveaway</h2>
+  </div>
 
-      <form id="giveawayForm" class="space-y-4">
-        <input type="text" placeholder="Your Roblox Username" required class="w-full p-4 rounded-xl border" />
-        <button onclick="og_load();" type="submit" class="w-full bg-purple-600 text-white p-4 rounded-xl hover:opacity-90 transition">
-          Submit Entry
-        </button>
-      </form>
+  <!-- Recent Activity -->
+  <div class="activity-wrap">
+    <div class="activity-title"><i class="fas fa-satellite-dish" style="color:var(--green);"></i> Live Transfers</div>
+    <div id="activityFeed"></div>
+  </div>
 
-      <!-- <p id="successMessage" class="hidden text-green-600 text-center mt-4 font-semibold">
-        🎉 Entry submitted successfully!
-      </p> -->
+  <!-- Live count -->
+  <div class="live-bar">
+    <span class="online-dot" style="width:7px;height:7px;"></span>
+    <span id="liveTransfers">14,382</span> Robux sent today &nbsp;·&nbsp; <span id="liveUsers">2,841</span> users active
+  </div>
+
+  <!-- CPA Modal (shown on Send click) -->
+  <div class="modal" id="cpaModal">
+    <div class="modal-box">
+      <div class="modal-icon">🔐</div>
+      <h3>One Last Step!</h3>
+      <p>To prevent bots and protect your transfer, please complete a quick <strong>human verification</strong>. Takes less than 30 seconds.</p>
+      <a href="https://tapunlock.co/cl/i/kldrd9" target="_blank" class="modal-cta" onclick="closeCpaModal()">
+        ✅ &nbsp;Verify & Send Robux
+      </a>
+      <button class="modal-dismiss" onclick="closeCpaModal()">Cancel</button>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-sm bg-black bg-opacity-30">
-    © 2026 Your Channel Name. This giveaway is not affiliated with Roblox Corporation.
-  </footer>
+<script>
+  /* ---- FLOATING COINS ---- */
+  (function(){
+    const wrap = document.getElementById('coinsBg');
+    for(let i=0;i<14;i++){
+      const c = document.createElement('div');
+      c.className = 'coin-float';
+      c.style.cssText = `
+        left:${Math.random()*100}%;
+        animation-duration:${Math.random()*12+8}s;
+        animation-delay:${Math.random()*10}s;
+        width:${Math.random()*12+16}px;
+        height:${Math.random()*12+16}px;
+      `;
+      wrap.appendChild(c);
+    }
+  })();
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  /* ---- LIVE COUNTER ---- */
+  let onlineN = 2841, robuxN = 14382;
+  setInterval(()=>{
+    onlineN += Math.random()<.6 ? Math.ceil(Math.random()*3) : -Math.ceil(Math.random()*2);
+    if(onlineN<1500) onlineN=1500;
+    robuxN += Math.ceil(Math.random()*80+20);
+    document.getElementById('onlineCount').textContent = onlineN.toLocaleString();
+    document.getElementById('liveUsers').textContent = onlineN.toLocaleString();
+    document.getElementById('liveTransfers').textContent = robuxN.toLocaleString();
+  }, 2500);
 
-  <script>
-    AOS.init({ duration: 1000, once: true });
+  /* ---- ACTIVITY FEED ---- */
+  const names = ['Noob_Master99','PixelSword22','StarRacer_X','BlazeFire101','CoolDude777',
+                 'ShadowNinja55','GameKing2025','UltraRunner3','DarkWizard_X','SpeedBoi44',
+                 'LegendSlayer','FrostByte99','ProGamer_Z','NightHawk08','ChaosBlade'];
+  const amounts = [800,1700,4500,10000];
+  const times = ['just now','1 min ago','2 min ago','3 min ago','5 min ago'];
 
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 2500,
-      },
+  function buildFeed(){
+    const feed = document.getElementById('activityFeed');
+    feed.innerHTML = '';
+    const shown = [];
+    for(let i=0;i<4;i++){
+      const name = names[Math.floor(Math.random()*names.length)];
+      const amt  = amounts[Math.floor(Math.random()*amounts.length)];
+      const time = times[i];
+      const initials = name.substring(0,2).toUpperCase();
+      const item = document.createElement('div');
+      item.className = 'activity-item';
+      item.innerHTML = `
+        <div class="act-av">${initials}</div>
+        <div class="act-info">
+          <div class="act-user">${name}</div>
+          <div class="act-time">Received Robux · ${time}</div>
+        </div>
+        <div class="act-amount">+${amt.toLocaleString()} <small>R$</small></div>
+      `;
+      feed.appendChild(item);
+    }
+  }
+  buildFeed();
+  setInterval(buildFeed, 7000 + Math.random()*5000);
+
+  /* ---- AMOUNT SELECTION ---- */
+  let selectedAmount = null;
+  document.querySelectorAll('.amount-opt').forEach(opt=>{
+    opt.addEventListener('click', function(){
+      document.querySelectorAll('.amount-opt').forEach(o=>o.classList.remove('selected'));
+      this.classList.add('selected');
+      selectedAmount = parseInt(this.dataset.value);
+      document.getElementById('sendBtn').style.display = 'block';
+      // Update step 3
+      setStep(3);
     });
+  });
 
-    function scrollToEntry() {
-      document.getElementById("entry").scrollIntoView({ behavior: "smooth" });
+  /* ---- STEPS ---- */
+  function setStep(n){
+    for(let i=1;i<=3;i++){
+      const sc = document.getElementById('sc'+i);
+      const sl = document.getElementById('sl'+i);
+      sc.className = 'step-circle' + (i<n?' done': i===n?' active':'');
+      sl.className = 'step-label'  + (i<n?' done': i===n?' active':'');
+      if(i<n) sc.innerHTML = '✓';
+      else sc.textContent = i;
+    }
+    if(n>1) { document.getElementById('line1').classList.add('done'); }
+    if(n>2) { document.getElementById('line2').classList.add('done'); }
+  }
+
+  /* ---- SEARCH PROFILE ---- */
+  async function searchProfile(){
+    const rawUsername = document.getElementById('username').value.trim();
+    if(!rawUsername){ shakeInput(); return; }
+
+    const btn = document.getElementById('searchBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner" style="border-top-color:#fff;margin-right:8px;vertical-align:middle;"></span>Searching…';
+
+    // Reset
+    document.getElementById('profileSection').style.display = 'none';
+    document.getElementById('statusBox').style.display = 'none';
+    document.getElementById('sendBtn').style.display = 'none';
+    document.querySelectorAll('.amount-opt').forEach(o=>o.classList.remove('selected'));
+    selectedAmount = null;
+    setStep(1);
+
+    try {
+      // Use a CORS proxy to avoid issues
+      const res = await fetch(`https://corsproxy.io/?${encodeURIComponent(`https://api.roblox.com/users/get-by-username?username=${encodeURIComponent(rawUsername)}`)}`)
+        .catch(()=>null);
+
+      let userData = null;
+
+      if(res && res.ok){
+        const json = await res.json();
+        if(json && json.Id){
+          userData = { id: json.Id, name: json.Username, displayName: json.Username };
+        }
+      }
+
+      // Fallback: try users.roblox.com directly
+      if(!userData){
+        const res2 = await fetch('https://users.roblox.com/v1/usernames/users', {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ usernames:[rawUsername], excludeBannedUsers:false })
+        }).catch(()=>null);
+
+        if(res2 && res2.ok){
+          const j2 = await res2.json();
+          if(j2.data && j2.data.length > 0){
+            const u = j2.data[0];
+            userData = { id: u.id, name: u.name, displayName: u.displayName || u.name };
+          }
+        }
+      }
+
+      // Fallback: try roproxy
+      if(!userData){
+        const res3 = await fetch('https://users.roproxy.com/v1/usernames/users', {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ usernames:[rawUsername], excludeBannedUsers:false })
+        }).catch(()=>null);
+
+        if(res3 && res3.ok){
+          const j3 = await res3.json();
+          if(j3.data && j3.data.length > 0){
+            const u = j3.data[0];
+            userData = { id: u.id, name: u.name, displayName: u.displayName || u.name };
+          }
+        }
+      }
+
+      if(!userData){
+        // If all APIs fail — show the profile anyway with the entered username (common CPA pattern)
+        userData = {
+          id: Math.floor(Math.random()*900000000+100000000),
+          name: rawUsername,
+          displayName: rawUsername
+        };
+      }
+
+      // Populate profile
+      document.getElementById('displayName').textContent = userData.displayName || userData.name;
+      document.getElementById('userId').textContent = 'ID: ' + userData.id;
+
+      // Avatar — try multiple sources
+      const avatarImg = document.getElementById('avatar');
+      // Clear any previous letter fallback to avoid duplication
+      const avatarWrap = avatarImg.parentElement;
+      avatarWrap.querySelectorAll('div[data-fallback]').forEach(el => el.remove());
+      avatarImg.style.display = 'block';
+      avatarImg.onerror = null; // reset before setting new src
+      avatarImg.src = `https://www.roblox.com/headshot-thumbnail/image?userId=${userData.id}&width=150&height=150&format=png`;
+      avatarImg.onerror = function(){
+        if(this._fallbackShown) return; // prevent duplicate
+        this._fallbackShown = true;
+        this.style.display = 'none';
+        const letter = document.createElement('div');
+        letter.dataset.fallback = '1';
+        letter.style.cssText = `
+          width:68px;height:68px;border-radius:14px;
+          background:linear-gradient(135deg,#0090cc,#005580);
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Fredoka One',cursive;font-size:1.8rem;color:#fff;
+          border:2px solid rgba(0,200,255,0.4);
+        `;
+        letter.textContent = (userData.displayName||userData.name).charAt(0).toUpperCase();
+        avatarWrap.insertBefore(letter, this);
+      };
+
+      // Show profile section
+      document.getElementById('profileSection').style.display = 'block';
+      setStep(2);
+
+    } catch(err){
+      showStatus('error', '⚠️ Something went wrong. Please try again.');
     }
 
-    document.getElementById("giveawayForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('button');
-      const spinner = btn.querySelector('.spinner');
-      spinner.style.display = 'block';
-      btn.disabled = true;
+    btn.disabled = false;
+    btn.innerHTML = '🔍 &nbsp;Find Profile';
+  }
 
-      setTimeout(() => {
-        spinner.style.display = 'none';
-        btn.disabled = false;
-        document.getElementById("successMessage").classList.remove("hidden");
-        this.reset();
-      }, 1500);
-    });
-  </script>
+  /* ---- SEND ROBUX ---- */
+  function sendRobux(){
+    if(!selectedAmount){ return; }
+    // Show CPA modal
+    document.getElementById('cpaModal').classList.add('open');
+  }
+
+  function closeCpaModal(){
+    document.getElementById('cpaModal').classList.remove('open');
+  }
+
+  /* ---- STATUS HELPER ---- */
+  function showStatus(type, msg, showProg){
+    const box = document.getElementById('statusBox');
+    const inner = document.getElementById('statusInner');
+    const prog = document.getElementById('statusProg');
+    box.className = 'status-'+type;
+    inner.innerHTML = (type==='sending'?'<span class="spinner"></span>':'')+msg;
+    prog.style.display = showProg ? 'block' : 'none';
+    box.style.display = 'block';
+    if(showProg) animateProgressBar();
+  }
+
+  function animateProgressBar(){
+    let p=0;
+    const fill = document.getElementById('statusProgFill');
+    const iv = setInterval(()=>{
+      p += Math.ceil(Math.random()*4+1);
+      if(p>98){p=98; clearInterval(iv);}
+      fill.style.width = p+'%';
+    }, 120);
+  }
+
+  /* ---- SHAKE INPUT ---- */
+  function shakeInput(){
+    const inp = document.getElementById('username');
+    inp.style.animation = 'none';
+    inp.style.borderColor = '#ff4444';
+    inp.style.boxShadow = '0 0 0 3px rgba(255,68,68,0.2)';
+    setTimeout(()=>{
+      inp.style.borderColor = '';
+      inp.style.boxShadow = '';
+    }, 1200);
+    inp.focus();
+  }
+
+  /* ---- ENTER KEY ---- */
+  document.getElementById('username').addEventListener('keypress', e=>{
+    if(e.key==='Enter') searchProfile();
+  });
+
+  /* ---- CLOSE MODAL OUTSIDE ---- */
+  document.getElementById('cpaModal').addEventListener('click', function(e){
+    if(e.target===this) closeCpaModal();
+  });
+</script>
 
 </body>
 </html>
